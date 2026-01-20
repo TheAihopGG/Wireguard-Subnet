@@ -19,8 +19,8 @@ services:
       - ALLOWEDIPS=0.0.0.0/0
       - LOG_CONFS=false
     volumes:
-      - /home/wireguard/config:/config
-      - /home/wireguard/lib/modules:/lib/modules
+      - ${WIREGUARD1_CONFIG_PATH}:/config
+      - ${WIREGUARD1_MODULES_PATH}:/lib/modules
     ports:
       - ${WIREGUARD1_PORT}:51820/udp
     sysctls:
@@ -45,8 +45,8 @@ services:
       - ALLOWEDIPS=0.0.0.0/0
       - LOG_CONFS=true
     volumes:
-      - /home/wireguard/config:/config
-      - /home/wireguard/lib/modules:/lib/modules
+      - ${WIREGUARD2_CONFIG_PATH}:/config
+      - ${WIREGUARD2_MODULES_PATH}:/lib/modules
     ports:
       - ${WIREGUARD2_PORT}:51820/udp
     sysctls:
