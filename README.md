@@ -13,6 +13,12 @@ Wireguard сервер, нацеленный на создание общей п
 - `WIREGUARD1_PEERS`
     Имена пользователей, разделенные запятой
 
+- `WIREGUARD1_CONFIG_PATH`
+    Путь для конфигурации wireguard
+
+- `WIREGUARD1_MODULES_PATH`
+    Путь для модулей wireguard
+
 ### wireguard-2
 - `WIREGUARD2_CONTAINER_NAME` 
     Название контейнера
@@ -22,6 +28,12 @@ Wireguard сервер, нацеленный на создание общей п
 
 - `WIREGUARD2_PEERS` 
     Имена пользователей, разделенные запятой
+
+- `WIREGUARD2_CONFIG_PATH`
+    Путь для конфигурации wireguard
+
+- `WIREGUARD2_MODULES_PATH`
+    Путь для модулей wireguard
 
 ## Запуск
 1. Убедитесь что вы используете Docker V2
@@ -43,3 +55,7 @@ docker compose up wireguard-2 -d
 ```sh
 docker compose restart имя-сервиса
 ```
+
+## Где найти конфигурации?
+
+Конфигурации можно найти по пути `WIREGUARD*_CONFIG_PATH`
