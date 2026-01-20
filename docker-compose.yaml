@@ -39,7 +39,7 @@ services:
       - TZ=Etc/UTC
       - SERVERURL=auto
       - SERVERPORT=${WIREGUARD2_PORT}
-      - PEERS=${WIREGUARD1_PEERS}
+      - PEERS=${WIREGUARD2_PEERS}
       - PEERDNS=auto
       - INTERNAL_SUBNET=10.13.13.0
       - ALLOWEDIPS=0.0.0.0/0
