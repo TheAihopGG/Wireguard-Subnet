@@ -12,7 +12,7 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
       - SERVERURL=auto
-      - SERVERPORT=${WIREGUARD1_PORT}
+      - SERVERPORT=51820
       - PEERS=${WIREGUARD1_PEERS}
       - PEERDNS=auto
       - INTERNAL_SUBNET=10.13.13.0
@@ -22,7 +22,7 @@ services:
       - ${WIREGUARD1_CONFIG_PATH}:/config
       - ${WIREGUARD1_MODULES_PATH}:/lib/modules
     ports:
-      - ${WIREGUARD1_PORT}:${WIREGUARD1_PORT}/udp
+      - ${WIREGUARD1_PORT}:51820/udp
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
       - net.ipv4.ip_forward=1
@@ -38,7 +38,7 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
       - SERVERURL=auto
-      - SERVERPORT=${WIREGUARD2_PORT}
+      - SERVERPORT=51820
       - PEERS=${WIREGUARD2_PEERS}
       - PEERDNS=auto
       - INTERNAL_SUBNET=10.13.13.0
@@ -48,7 +48,7 @@ services:
       - ${WIREGUARD2_CONFIG_PATH}:/config
       - ${WIREGUARD2_MODULES_PATH}:/lib/modules
     ports:
-      - ${WIREGUARD2_PORT}:${WIREGUARD2_PORT}/udp
+      - ${WIREGUARD2_PORT}:51820/udp
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
       - net.ipv4.ip_forward=1
