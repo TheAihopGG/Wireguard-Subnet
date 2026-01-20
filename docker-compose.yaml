@@ -17,7 +17,7 @@ services:
       - PEERDNS=auto
       - INTERNAL_SUBNET=10.13.13.0
       - ALLOWEDIPS=0.0.0.0/0
-      - LOG_CONFS=true
+      - LOG_CONFS=false
     volumes:
       - /home/wireguard/config:/config
       - /home/wireguard/lib/modules:/lib/modules
